@@ -25,20 +25,6 @@ npm run build      # production build → dist/
 npm run preview    # preview the production build
 ```
 
-## Configure EmailJS (Contact form)
-
-Open `src/components/Contact.jsx` and replace the three placeholder constants with
-your EmailJS credentials from https://dashboard.emailjs.com:
-
-```js
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-```
-
-Until these are filled in, the form simulates a successful send locally so the UI can
-still be demoed end-to-end.
-
 ## Project Structure
 
 ```
