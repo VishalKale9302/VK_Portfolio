@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad-portfolio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B6FF3C"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#14171C"/>
+  <rect width="800" height="600" fill="url(#grad-portfolio)" opacity="0.18"/>
+  <g opacity="0.5">
+    <rect x="60" y="60" width="680" height="40" rx="8" fill="#B6FF3C" opacity="0.35"/>
+    <circle cx="90" cy="80" r="8" fill="#B6FF3C"/>
+    <circle cx="120" cy="80" r="8" fill="#B6FF3C"/>
+    <circle cx="150" cy="80" r="8" fill="#7C5CFF"/>
+  </g>
+  <text x="60" y="330" font-family="Space Grotesk, sans-serif" font-size="48" font-weight="700" fill="#E6E8EB">Portfolio</text>
+  <text x="60" y="380" font-family="JetBrains Mono, monospace" font-size="20" fill="#B6FF3C">&lt;/&gt; built with React</text>
+</svg>
