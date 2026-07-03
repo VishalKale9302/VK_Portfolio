@@ -106,38 +106,51 @@ const Navbar = ({ scrollProgress = 0 }) => {
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="glass border-b lg:hidden"
-          >
-            <ul className="container-px flex flex-col gap-1 py-4">
-              {NAV_LINKS.map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => handleNavClick(link.id)}
-                    className={`block w-full py-2.5 text-left font-mono text-sm ${
-                      activeId === link.id ? 'text-accent' : 'text-muted'
-                    }`}
-                  >
-                    {link.label}
-                  </button>
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18 }}
+              className="fixed inset-0 z-40 bg-black/40 lg:hidden"
+              onClick={() => setOpen(false)}
+              aria-hidden="true"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: -16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+              className="fixed inset-x-0 top-[4.5rem] z-50 overflow-hidden border-b border-slate-800/70 bg-slate-950 text-white shadow-2xl lg:hidden"
+            >
+              <ul className="container-px flex flex-col gap-1 py-4">
+                {NAV_LINKS.map((link) => (
+                  <li key={link.id}>
+                    <button
+                      onClick={() => handleNavClick(link.id)}
+                      className={`block w-full py-2.5 text-left font-mono text-sm ${
+                        activeId === link.id ? 'text-accent' : 'text-muted'
+                      }`}
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+                <li className="mt-2 flex items-center gap-5">
+                  <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-muted">
+                    <FiGithub size={20} />
+                  </a>
+                  <a href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-muted">
+                    <FiLinkedin size={20} />
+                  </a>
+                  <Button href={PERSONAL.resumeUrl} target="_blank" icon={FiDownload} className="!px-5 !py-2.5 text-xs">
+                    Resume
+                  </Button>
                 </li>
-              ))}
-              <li className="mt-2 flex items-center gap-5">
-                <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-muted">
-                  <FiGithub size={20} />
-                </a>
-                <a href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="text-muted">
-                  <FiLinkedin size={20} />
-                </a>
-                <Button href={PERSONAL.resumeUrl} target="_blank" icon={FiDownload} className="!px-5 !py-2.5 text-xs">
-                  Resume
-                </Button>
-              </li>
-            </ul>
-          </motion.div>
+              </ul>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>

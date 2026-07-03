@@ -122,7 +122,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div ref={imageRef} className="relative mx-auto w-full max-w-sm">
+        <div ref={imageRef} className="relative mx-auto hidden w-full max-w-sm md:block">
           <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/40 to-accent2/30 blur-2xl" />
           <div className="glass relative overflow-hidden rounded-[2rem] border p-2">
             <div className="flex items-center gap-1.5 px-3 py-2 font-mono text-[10px] text-muted">
