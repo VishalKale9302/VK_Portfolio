@@ -28,5 +28,5 @@ export const PERSONAL = {
   ],
   summary:
     'Frontend Developer with strong knowledge of React.js, JavaScript ES6+, HTML5, CSS3 and Tailwind CSS. Passionate about building responsive and reusable UI components while continuously learning modern frontend technologies.',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/Vishal_Kale_Resume.pdf',
 };

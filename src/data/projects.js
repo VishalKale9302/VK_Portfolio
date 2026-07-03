@@ -21,7 +21,7 @@ export const projects = [
     tech: ['React.js', 'Tailwind CSS', 'JavaScript'],
     features: ['Dark / Light Theme', 'Scroll Animations', 'Responsive Grid'],
     image: '/projects/portfolio.svg',
-    live: '#',
+    live: 'https://vk-portfolio-silk.vercel.app',
     github: 'https://github.com/VishalKale9302',
     featured: true,
   },

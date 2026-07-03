@@ -36,7 +36,7 @@ src/
   data/         Content: projects, skills, education, certificates, site/nav/social
   assets/       Images
 public/
-  resume.pdf, favicon.svg, robots.txt, sitemap.xml, project/certificate images
+  Vishal_Kale_Resume.pdf, favicon.svg, robots.txt, sitemap.xml, project/certificate images
 ```
 
 ## Notes
@@ -47,5 +47,5 @@ public/
   Contact) are code-split with `React.lazy` for faster first paint.
 - Custom cursor and parallax tilt automatically disable on touch devices.
 - All motion respects `prefers-reduced-motion`.
-- Update `public/resume.pdf` with your real resume file, and swap the SVG placeholders
+- Update `public/Vishal_Kale_Resume.pdf` with your real resume file, and swap the SVG placeholders
   in `public/projects/` and `public/certificates/` for real screenshots when ready.
